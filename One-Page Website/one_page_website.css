@@ -1,10 +1,16 @@
 p {
     font-size:20px;
     text-align: center;
+    font-family: 'Courier New', Courier, monospace;
 }
 h1 {
     font-size: 40px;
     text-align: center;
+    color: rgb(217, 86, 86);
+    font-family: 'Courier New', Courier, monospace;
+    z-index: 100;
+    position: relative;
+    
 }
 
 title {
@@ -13,14 +19,13 @@ title {
 
 h2 {
     font-size: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
 }
 
 h3 {
     font-size: 20px;
-}
-
-h1, h3, p {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .rsvp {
@@ -30,4 +35,245 @@ h1, h3, p {
         border: 2px red;
         border-radius: 4px;
         text-align: center;
-    }
+}
+
+body {
+        margin: 0;
+}
+
+.Navbar a:hover {
+        background-color: #f4f4f4;
+        color: black;
+        font-weight: bold;
+}
+@keyframes moveNav {
+    from {left: -100vw}
+    to {left: 0vw}
+}
+
+.Navbar {
+    overflow: hidden;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    -webkit-animation: moveNav 5s;
+    animation: moveNav 5s;
+}
+    
+
+    
+@keyframes moveNavText {
+        from {top: -100vw;}
+        to {top: 0vw;}
+}
+.Navbar a {
+    float: left;
+    display: block;
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    position: relative;
+    font-size: 20px;
+    -webkit-animation: moveNavText 5.75s;
+    animation: moveNavtext 5.75s;
+}
+* {
+    box-sizing: border-box;
+}
+  
+.row, .column {
+    padding: 0 8px;
+}
+      
+.row:after {
+        content: "";
+        display: table;
+        clear: both;
+}
+      
+.column {
+        float: left;
+        width: 25%;
+}
+      
+      /* The Modal (background) */
+.modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        padding-top: 100px;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: black;
+        z-index: 500;
+}
+      
+      /* Modal Content */
+.modal-content {
+        position: relative;
+        background-color: #fefefe;
+        margin: auto;
+        padding: 0;
+        width: 90%;
+        max-width: 1200px;
+}
+      
+      /* The Close Button */
+.close {
+        color: white;
+        position: absolute;
+        top: 10px;
+        right: 25px;
+        font-size: 35px;
+        font-weight: bold;
+}
+      
+.close:hover,
+.close:focus {
+        color: #999;
+        text-decoration: none;
+        cursor: pointer;
+}
+      
+.mySlides {
+        display: none;
+}
+      
+.cursor {
+        cursor: pointer;
+}
+      
+      /* Next & previous buttons */
+.prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        margin-top: -50px;
+        color: white;
+        font-weight: bold;
+        font-size: 20px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+        -webkit-user-select: none;
+}
+      
+      /* Position the "next button" to the right */
+.next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+}
+      
+      /* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+        background-color: rgba(192, 147, 25, 0.8);
+}
+      
+      /* Number text (1/3 etc) */
+.numbertext {
+        color: #f2f2f2;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #f2f2f2;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: palegoldenrod;
+}
+      
+img {
+        margin-bottom: -4px;
+}
+      
+.caption-container {
+        text-align: center;
+        background-color: black;
+        padding: 2px 16px;
+        color: white;
+}
+      
+.demo {
+        opacity: 0.6;
+}
+      
+.active,
+.demo:hover {
+        opacity: 1;
+      }
+      
+img.hover-shadow {
+        transition: 0.3s;
+}
+      
+.hover-shadow:hover {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+input[type=text] {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid purple;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        resize: vertical;
+        font-family: 'Courier New', Courier, monospace;
+}
+    
+input[type=text]:hover {
+        box-shadow: 0 0 5px #00004d inset;
+}
+    
+input[type=submit] {
+        background-color: #564d56;
+        color: white;
+        font-weight: auto;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        font-family: 'Courier New', Courier, monospace;
+    
+}
+    
+input[type=submit]:hover {
+        background-color: black;
+        color: white;
+        transform: scale(1.5);
+        transition: transform 1.5s;
+}
+    
+form {
+        border-radius: 5px solid black;
+        background-color: rgb(210, 146, 210);
+        padding: 10px;
+        font-family: 'Courier New', Courier, monospace;
+        border: #00004d;
+        
+}

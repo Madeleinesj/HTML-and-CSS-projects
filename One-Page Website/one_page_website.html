@@ -5,13 +5,15 @@
 	<h1>Travel To Amsterdam!</h1>
 	<meta charset="utf-8">
     <link rel="stylesheet" href="one_page_website.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="JS/one_page_website.js" defer></script>
 	<p>Spend your time walking the canals or visit the beautiful tulip fields before grabbing some amazing food and exploring the night life of this eclectic European city.</p>
 </head>
 	<body>
 
 		<!--NAV-->
         <div>
-            <div>
+            <div class="Navbar">
                 <ul>
                     <a href="#home" id="link"><li>HOME</li></a>
                     <a href="#gallery"><li>GALLERY</li></a>
@@ -29,41 +31,64 @@
 					
                     
                     <!--PHOTO-CONTAINER 1-->
-                    <div class="photo-container">
-                        <div class="photo">
-                            <img src="./ams1.jpg">
-                            <div class="photo-overlay">
-                                <h3 class="white-head">Click to Enlarge</h3>
-                                <p>We have several tours daily, book your tour today!</p>
+                    <!--Images to use to open whitebox-->
+                    <div class="row">
+                        <div class="column">
+                            <img src="./ams1.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+                        </div>
+                        <div class="column">
+                            <img src="./ams4.jpg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+                        </div>
+                        <div class="column">
+                            <img src="./ams2.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+                        </div>
+                        <div class="column">
+                            <img src="./ams7.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+                        </div>
+                    </div>
+                    <!--The Modal/Lightbox-->
+                    <div id="myModal" class="modal">
+                        <span class="close cursor" onclick="closeModal()">&times;</span>
+                        <div class="modal-content">
+                            <div class="mySlides">
+                                <div class="numbertext">1 / 4</div>
+                                <img src="./ams1.jpg" style="width: 100%">
+                            </div>
+                            <div class="mySlides">
+                                <div class="numbertext">2 / 4</div>
+                                <img src="./ams4.jpg" style="width: 100%">
+                            </div>
+                            <div class="mySlides">
+                                <div class="numbertext">3 / 4</div>
+                                <img src="./ams2.jpg" style="width: 100%">
+                            </div>
+                            <div class="mySlides">
+                                <div class="numbertext">4 / 4</div>
+                                <img src="./ams7.jpg" style="width: 100%">
                             </div>
                         </div>
                     </div>
-                    <!--END PHOTO-CONTAINER 1-->
                     
-                <!--PHOTO-CONTAINER 2-->
-                    <div class="photo-container">
-                        <div class="photo">
-                            <img src="./ams4.jpg">
-                            <div class="photo-overlay">
-                                <h3 class="white-head">Click to Enlarge</h3>
-                                <p>We have several tours daily, book your tour today!</p>
-                            </div>
-                        </div>
-                    </div>
-                <!--END PHOTO-CONTAINER 2-->
-                                    
-                <!--PHOTO-CONTAINER 3-->
-                    <div class="photo-container">
-                        <div class="photo">
-                            <img src="./ams7.jpg">
-                            <div class="photo-overlay">
-                                <h3 class="white-head">Click to Enlarge</h3>
-                                <p>We have several tours daily, book your tour today!</p>
-                            </div>
-                        </div>
-                    </div>
-                <!--END PHOTO-CONTAINER 3-->
-				<iframe width="560" height="315" src="https://www.youtube.com/embed/zsOTrKccuEw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <!--Next/previous controls-->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                <div style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                </div>
+                    
+                      
+            </div>
+                <!--Caption this-->
+                <div class="caption-container">
+                    <p id="caption"></p>
+                </div>
+
+                
+
+				
 </body>
 <footer>
         <!--RSVP-->
